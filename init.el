@@ -1,4 +1,5 @@
 
+
 (setq-default
  inhibit-startup-message t
  custom-file "~/.emacs.d/custom-file.el"
@@ -25,7 +26,11 @@
  save-interprogram-paste-before-kill t
  apropos-do-all t)
 
+(load-file custom-file)
+
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
+
+(load-theme 'spacemacs-dark)
