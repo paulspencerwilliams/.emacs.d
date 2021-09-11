@@ -33,10 +33,24 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 
-(load-theme 'spacemacs-dark)
-(global-company-mode t)
+(when (not (package-installed-p 'use-package))
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-(define-key company-active-map (kbd "C-n") 'company-select-next)
-(define-key company-active-map (kbd "C-p") 'company-select-previous)
 
 (setq company-idle-delay 0.0)
+
+(use-package magit
+  :ensure t)
+
+(use-package spacemacs-common
+  :ensure spacemacs-theme
+  :config (load-theme 'spacemacs-dark t))
+
+(use-package company
+ :ensure t
+ :defer t
+ :bind (:map company-active-map
+         ("C-n" . company-select-next)
+         ("C-p" . company-select-previous))
+ :init (global-company-mode))
