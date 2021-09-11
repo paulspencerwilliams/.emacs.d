@@ -34,3 +34,9 @@
              '("melpa" . "https://melpa.org/packages/") t)
 
 (load-theme 'spacemacs-dark)
+(global-company-mode t)
+
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
+
+(setq company-idle-delay 0.0)
