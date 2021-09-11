@@ -24,3 +24,8 @@
  x-select-enable-primary t
  save-interprogram-paste-before-kill t
  apropos-do-all t)
+
+(require 'package)
+(package-initialize)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
