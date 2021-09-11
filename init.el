@@ -1,5 +1,3 @@
-
-
 (setq-default
  inhibit-startup-message t
  custom-file "~/.emacs.d/custom-file.el"
@@ -63,3 +61,11 @@
    :config
   (setq exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-initialize))
+
+(use-package flycheck-clj-kondo
+  :ensure t)
+
+(use-package clojure-mode
+  :ensure t
+  :config
+  (require 'flycheck-clj-kondo))
