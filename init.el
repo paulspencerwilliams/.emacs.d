@@ -54,3 +54,6 @@
          ("C-n" . company-select-next)
          ("C-p" . company-select-previous))
  :init (global-company-mode))
+
+(use-package cider
+  :ensure t)
