@@ -80,3 +80,11 @@
   :config
   (progn
     (setq smartparens-strict-mode t)))
+
+(use-package es-mode
+  :ensure t
+  :defer t)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((elasticsearch . t)))
