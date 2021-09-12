@@ -87,6 +87,7 @@
 
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((elasticsearch . t)))
+ '((elasticsearch . t)
+   (sql . t)))
 
 (setq sql-postgres-program "/usr/local/opt/libpq/bin/psql")
