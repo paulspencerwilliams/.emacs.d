@@ -69,3 +69,14 @@
   :ensure t
   :config
   (require 'flycheck-clj-kondo))
+
+(use-package smartparens
+  :ensure t
+  :init
+  (progn
+    (use-package smartparens-config)
+    (smartparens-global-strict-mode 1)
+    (show-smartparens-global-mode 1))
+  :config
+  (progn
+    (setq smartparens-strict-mode t)))
