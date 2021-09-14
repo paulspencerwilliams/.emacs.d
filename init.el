@@ -84,9 +84,21 @@
   :ensure t
   :defer t)
 
+(use-package restclient
+  :ensure t)
+
+(use-package ob-restclient
+  :ensure t)
+
+(use-package projectile
+  :ensure t
+  :init
+  (projectile-mode +1))
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((elasticsearch . t)
-   (sql . t)))
+   (sql . t)
+   (restclient . t)))
 
 (setq sql-postgres-program "/usr/local/opt/libpq/bin/psql")
