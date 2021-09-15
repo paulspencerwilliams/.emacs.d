@@ -59,7 +59,9 @@
 (use-package exec-path-from-shell
   :ensure t
    :config
-  (exec-path-from-shell-initialize))
+   (exec-path-from-shell-initialize)
+   (exec-path-from-shell-copy-env "AWS_ACCESS_KEY_ID")
+   (exec-path-from-shell-copy-env "AWS_SECRET_ACCESS_KEY"))
 
 (use-package flycheck-clj-kondo
   :ensure t)
