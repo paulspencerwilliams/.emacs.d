@@ -17,6 +17,7 @@
 (scroll-bar-mode -1)
 (global-hl-line-mode t)
 (line-number-mode t)
+(set-face-attribute 'default nil :height 160)
 
 (setq-default
  x-select-enable-clipboard t
