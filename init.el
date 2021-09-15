@@ -74,14 +74,12 @@
 
 (use-package smartparens
   :ensure t
+  :diminish smartparens-mode
   :init
-  (progn
-    (use-package smartparens-config)
-    (smartparens-global-strict-mode 1)
-    (show-smartparens-global-mode 1))
+  (smartparens-global-mode)
   :config
-  (progn
-    (setq smartparens-strict-mode t)))
+  (require 'smartparens-config)
+  (sp-use-paredit-bindings))
 
 (use-package es-mode
   :ensure t
