@@ -55,7 +55,9 @@
  :init (global-company-mode))
 
 (use-package cider
-  :ensure t)
+  :ensure t
+  :config
+  (setq clojure-toplevel-inside-comment-form t))
 
 (use-package exec-path-from-shell
   :ensure t
