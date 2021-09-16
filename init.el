@@ -81,7 +81,9 @@
   (smartparens-global-mode)
   :config
   (require 'smartparens-config)
-  (sp-use-paredit-bindings))
+  (sp-use-paredit-bindings)
+  :hook
+  ((clojure-mode . smartparens-strict-mode)))
 
 (use-package es-mode
   :ensure t
