@@ -45,7 +45,7 @@
 
 (use-package spacemacs-common
   :ensure spacemacs-theme
-  :config (load-theme 'spacemacs-dark t))
+  :config (load-theme 'spacemacs-light t))
 
 (use-package company
  :ensure t
