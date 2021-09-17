@@ -5,6 +5,7 @@
  create-lockfiles nil
  indent-tabs-mode nil
  auto-save-default nil
+ make-backup-files nil
  enable-recursive-minibuffers t)
 
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -64,7 +65,8 @@
    :config
    (exec-path-from-shell-initialize)
    (exec-path-from-shell-copy-env "AWS_ACCESS_KEY_ID")
-   (exec-path-from-shell-copy-env "AWS_SECRET_ACCESS_KEY"))
+   (exec-path-from-shell-copy-env "AWS_SECRET_ACCESS_KEY")
+   (exec-path-from-shell-copy-env "AM_PROFILE"))
 
 (use-package flycheck-clj-kondo
   :ensure t)
