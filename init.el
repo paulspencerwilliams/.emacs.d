@@ -6,7 +6,8 @@
  indent-tabs-mode nil
  auto-save-default nil
  make-backup-files nil
- enable-recursive-minibuffers t)
+ enable-recursive-minibuffers t
+ initial-frame-alist (quote ((fullscreen . maximized))))
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
