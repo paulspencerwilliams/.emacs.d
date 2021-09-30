@@ -9,6 +9,8 @@
  enable-recursive-minibuffers t
  initial-frame-alist (quote ((fullscreen . maximized))))
 
+(load "~/.emacs.d/environment.el")
+
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
