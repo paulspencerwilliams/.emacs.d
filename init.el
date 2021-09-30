@@ -27,8 +27,6 @@
  save-interprogram-paste-before-kill t
  apropos-do-all t)
 
-(load-file custom-file)
-
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives
