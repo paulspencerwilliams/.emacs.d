@@ -113,6 +113,10 @@
   :config
   (global-disable-mouse-mode))
 
+(use-package expand-region
+  :ensure t
+  :bind ("C-=" . er/expand-region))
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((elasticsearch . t)
