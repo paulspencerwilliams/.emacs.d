@@ -108,6 +108,11 @@
   :config
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
+(use-package disable-mouse
+  :ensure t
+  :config
+  (global-disable-mouse-mode))
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((elasticsearch . t)
