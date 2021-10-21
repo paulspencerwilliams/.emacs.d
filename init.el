@@ -59,7 +59,9 @@
 (use-package cider
   :ensure t
   :config
-  (setq clojure-toplevel-inside-comment-form t))
+  (setq clojure-toplevel-inside-comment-form t)
+  (setq cider-save-file-on-load t)
+  (setq cider-repl-pop-to-buffer-on-connect nil))
 
 (use-package exec-path-from-shell
   :ensure t
