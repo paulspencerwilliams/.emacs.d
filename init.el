@@ -29,6 +29,9 @@
  save-interprogram-paste-before-kill t
  apropos-do-all t)
 
+(setq mac-option-key-is-meta t)
+(setq mac-right-option-modifier nil)
+
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives
