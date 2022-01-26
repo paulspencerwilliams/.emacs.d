@@ -32,6 +32,9 @@
 (setq mac-option-key-is-meta t)
 (setq mac-right-option-modifier nil)
 
+(custom-set-variables
+ '(gnutls-algorithm-priority "normal:-vers-tls1.3"))
+
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives
