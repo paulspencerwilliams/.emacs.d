@@ -44,23 +44,12 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-
-(setq company-idle-delay 0.0)
-
 (use-package magit
   :ensure t)
 
 (use-package spacemacs-common
   :ensure spacemacs-theme
   :config (load-theme 'spacemacs-light t))
-
-(use-package company
- :ensure t
- :defer t
- :bind (:map company-active-map
-         ("C-n" . company-select-next)
-         ("C-p" . company-select-previous))
- :init (global-company-mode))
 
 (use-package cider
   :ensure t
@@ -100,12 +89,6 @@
   :ensure t
   :defer t)
 
-(use-package restclient
-  :ensure t)
-
-(use-package ob-restclient
-  :ensure t)
-
 (use-package projectile
   :ensure t
   :init
@@ -125,9 +108,13 @@
   :ensure t
   :bind ("C-=" . er/expand-region))
 
+(use-package ob-async
+  :ensure t)
+
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((elasticsearch . t)
+ '((shell . t)
+   (elasticsearch . t)
    (sql . t)
    (restclient . t)))
 
