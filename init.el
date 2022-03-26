@@ -115,8 +115,7 @@
  'org-babel-load-languages
  '((shell . t)
    (elasticsearch . t)
-   (sql . t)
-   (restclient . t)))
+   (sql . t)))
 
 (setq sql-postgres-program "/usr/local/opt/libpq/bin/psql")
 
