@@ -51,6 +51,15 @@
   :ensure spacemacs-theme
   :config (load-theme 'spacemacs-light t))
 
+
+(use-package company
+  :ensure t
+  :defer t
+  :bind (:map company-active-map
+          ("C-n" . company-select-next)
+          ("C-p" . company-select-previous))
+  :init (global-company-mode))
+
 (use-package cider
   :ensure t
   :config
