@@ -140,3 +140,13 @@
 (global-unset-key (kbd "<M-right>"))
 (global-unset-key (kbd "<M-up>"))
 (global-unset-key (kbd "<M-down>"))
+
+(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode))
+
+(use-package savehist
+  :ensure t
+  :init
+  (savehist-mode))
