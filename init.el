@@ -150,3 +150,7 @@
   :ensure t
   :init
   (savehist-mode))
+
+(use-package expand-region
+  :ensure t
+  :bind ("C-=" . er/expand-region))
