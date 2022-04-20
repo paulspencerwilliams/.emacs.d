@@ -154,3 +154,8 @@
 (use-package expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
+
+(setq org-adapt-indentation nil)          ;; Disable indentation of content below headlines
+(setq org-edit-src-content-indentation 0) ;; Disable indentation of source blocks
+(setq org-src-preserve-indentation nil)   ;; Disable indentation for exported source blocks
+(setq org-indent-indentation-per-level 0) ;; Keep everything flush-left
