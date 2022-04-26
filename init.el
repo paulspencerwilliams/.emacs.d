@@ -67,6 +67,9 @@
   (setq cider-save-file-on-load t)
   (setq cider-repl-pop-to-buffer-on-connect nil))
 
+(add-hook 'cider-repl-mode-hook '(lambda () (setq scroll-conservatively 101)))
+
+
 (use-package exec-path-from-shell
   :ensure t
    :config
@@ -154,3 +157,8 @@
 (use-package expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
+
+(use-package yasnippet
+  :ensure t
+  :config(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+  (yas-global-mode 1))
